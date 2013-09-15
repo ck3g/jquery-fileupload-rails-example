@@ -1,0 +1,5 @@
+<% if @upload.new_record? %>
+  $("#errors").append("<%=j render('error', upload: @upload) %>");
+<% else %>
+  $("#files").append("<%=j render('upload', upload: @upload) %>");
+<% end %>

@@ -1,0 +1,8 @@
+<div class="upload" id="<%= dom_id(upload) %>">
+  <%= link_to upload.picture.url do %>
+    <%= image_tag upload.picture.url(:thumb) %>
+  <% end %>
+  <div class="delete">
+    <%= link_to "Delete", upload, class: 'btn btn-danger', method: :delete, :'data-confirm' => 'Are you sure?' %>
+  </div>
+</div>
