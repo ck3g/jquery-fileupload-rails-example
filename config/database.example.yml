@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: '123'
+
+development:
+  <<: *common
+  database: jq_fileupload_example_development
+
+test:
+  <<: *common
+  database: jq_fileupload_example_test
+
+production:
+  <<: *common
+  database: jq_fileupload_example_development
